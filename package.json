@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "author": "Ritesh",
   "license": "ISC",
@@ -13,7 +13,10 @@
     "nodemon": "^3.1.7"
   },
   "dependencies": {
-    "nodemon":"3.1.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.7.0",
+    "nodemon": "3.1.7",
     "prettier": "^3.3.3"
   }
 }

@@ -4,7 +4,7 @@ import cors from 'cors';
 
 const app=express()
 
-app.arguments(cors({
+app.use(cors({
     origin:process.env.CORS_ORIGIN,
     Credentials:true
 }))
@@ -15,4 +15,10 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 
+//routes import
+import userRouter from './routes/user.routes.js'
+
+
+//router declaration
+app.use("/api/v1/users",userRouter)
 export {app} 

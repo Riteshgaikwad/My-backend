@@ -9,6 +9,6 @@ const storage =multer.diskStorage({
         cb( null,file.originalname)
     }
 })
-
+//changes
  
 export const upload=multer({storage,})
